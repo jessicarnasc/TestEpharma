@@ -152,3 +152,26 @@ Click Javascript
     Execute Javascript   arguments[0].click();     ARGUMENTS    ${elemento2}
     Capture Page Screenshot  
 
+Selecionar Genero
+    [Arguments]                                         ${genero}
+    IF             '${genero}'=='Female'
+        Click no Item           ${ChkBoxGeneroFemale}    
+    ELSE IF        '${genero}'=='Male'
+        Click no Item           ${ChBoxGeneroMale}   
+    ELSE IF        '${genero}'=='Other'
+        Click no Item           ${ChBoxGeneroOther}  
+    ELSE
+        Fatal Error     msg=Elemento '${genero}' invalido ou desconhecido
+    END
+
+Selecionar Hobbie
+    [Arguments]                                         ${hobbie}
+    IF             '${hobbie}'=='Sports'
+        Click no Item           ${HobbieMusic}     
+    ELSE IF        '${hobbie}'=='Reading'
+        Click no Item           ${HobbieSports}   
+    ELSE IF        '${hobbie}'=='Music'
+        Click no Item           ${HobbieReading}  
+    ELSE
+        Fatal Error     msg=Elemento '${genero}' invalido ou desconhecido
+    END

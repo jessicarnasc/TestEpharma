@@ -1,0 +1,1941 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0 (Python 3.9.4 on win32)" generated="20230305 14:00:55.352" rpa="false" schemaversion="3">
+<suite id="s1" name="QAtest" source="C:\Users\MRN Informatica\Documents\TesteEpharma\QAtest\QAtest.robot">
+<test id="s1-t1" name="CT01:Cadatro Novo" line="12">
+<kw name="Abrir navegador" library="QAresource" type="SETUP">
+<arg>${URL}</arg>
+<kw name="Evaluate" library="BuiltIn">
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230305 14:01:00.145" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000023D4768A7C0&gt;</msg>
+<status status="PASS" starttime="20230305 14:01:00.144" endtime="20230305 14:01:00.145"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>test-type</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20230305 14:01:00.145" endtime="20230305 14:01:00.146"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-extensions</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20230305 14:01:00.146" endtime="20230305 14:01:00.146"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20230305 14:01:00.146" endtime="20230305 14:01:00.147"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20230305 14:01:00.147" endtime="20230305 14:01:00.147"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${tela}</arg>
+<arg>chrome</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230305 14:01:00.149" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
+<status status="PASS" starttime="20230305 14:01:00.147" endtime="20230305 14:01:13.861"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230305 14:01:13.863" endtime="20230305 14:01:14.909"/>
+</kw>
+<kw name="Print Tela" library="QAresource">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230305 14:01:16.962" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230305 14:01:14.915" endtime="20230305 14:01:16.963"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:14.912" endtime="20230305 14:01:16.964"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:00.143" endtime="20230305 14:01:16.965"/>
+</kw>
+<kw name="Dado que acesso ao site Demo QA" library="QAsteps">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById('fixedban').style.display = "none";</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230305 14:01:16.978" level="INFO">Executing JavaScript:
+document.getElementById('fixedban').style.display = "none";
+Without any arguments.</msg>
+<status status="PASS" starttime="20230305 14:01:16.971" endtime="20230305 14:01:17.030"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:18.048" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:17.035" endtime="20230305 14:01:18.050"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:17.031" endtime="20230305 14:01:18.056"/>
+</kw>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${Logo}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:01:18.067" endtime="20230305 14:01:18.340"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:18.064" endtime="20230305 14:01:18.341"/>
+</kw>
+<msg timestamp="20230305 14:01:18.343" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:01:18.061" endtime="20230305 14:01:18.343"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:19.358" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:18.347" endtime="20230305 14:01:19.359"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:18.344" endtime="20230305 14:01:19.361"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:01:19.362" endtime="20230305 14:01:19.365"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:18.057" endtime="20230305 14:01:19.366"/>
+</kw>
+<kw name="Print Tela" library="QAresource">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230305 14:01:21.103" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230305 14:01:19.369" endtime="20230305 14:01:21.104"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:19.367" endtime="20230305 14:01:21.105"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:16.969" endtime="20230305 14:01:21.105"/>
+</kw>
+<kw name="Quando preencho as informações pessoais &quot;Jessica&quot;, &quot;Nascimento&quot;, &quot;jessicarochalima21@gmail.com&quot;, &quot;11987793226&quot;, &quot;25&quot;, &quot;August&quot;, &quot;1991&quot;, &quot;Computer Science&quot;." library="QAsteps" sourcename="Quando preencho as informações pessoais &quot;${nome}&quot;, &quot;${sobrenome}&quot;, &quot;${email}&quot;, &quot;${telefone}, &quot;${dia}&quot;, &quot;${mes}&quot;, &quot;${ano}&quot;, &quot;${assunto}&quot;.">
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:22.127" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:21.112" endtime="20230305 14:01:22.127"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:21.110" endtime="20230305 14:01:22.128"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${nomeCompleto}</arg>
+<arg>${nome} ${sobrenome}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20230305 14:01:22.133" level="INFO">${nomeCompleto} = Jessica Nascimento</msg>
+<status status="PASS" starttime="20230305 14:01:22.128" endtime="20230305 14:01:22.134"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${email}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20230305 14:01:22.135" level="INFO">${email} = jessicarochalima21@gmail.com</msg>
+<status status="PASS" starttime="20230305 14:01:22.134" endtime="20230305 14:01:22.135"/>
+</kw>
+<kw name="Preenche Text" library="QAresource">
+<arg>${InputNome}</arg>
+<arg>${nome}</arg>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${input}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:01:22.139" endtime="20230305 14:01:22.223"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:22.138" endtime="20230305 14:01:22.223"/>
+</kw>
+<msg timestamp="20230305 14:01:22.223" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:01:22.137" endtime="20230305 14:01:22.223"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:23.233" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:22.224" endtime="20230305 14:01:23.233"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:22.223" endtime="20230305 14:01:23.233"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:01:23.234" endtime="20230305 14:01:23.234"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:22.136" endtime="20230305 14:01:23.234"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230305 14:01:23.236" level="INFO">Typing text 'Jessica' into text field 'xpath=//input[@placeholder='First Name']'.</msg>
+<status status="PASS" starttime="20230305 14:01:23.235" endtime="20230305 14:01:23.398"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:22.135" endtime="20230305 14:01:23.398"/>
+</kw>
+<kw name="Preenche Text" library="QAresource">
+<arg>${InputSobrenome}</arg>
+<arg>${sobrenome}</arg>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${input}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:01:23.402" endtime="20230305 14:01:23.437"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:23.401" endtime="20230305 14:01:23.437"/>
+</kw>
+<msg timestamp="20230305 14:01:23.437" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:01:23.401" endtime="20230305 14:01:23.438"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:24.451" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:23.438" endtime="20230305 14:01:24.451"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:23.438" endtime="20230305 14:01:24.452"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:01:24.452" endtime="20230305 14:01:24.453"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:23.400" endtime="20230305 14:01:24.453"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230305 14:01:24.455" level="INFO">Typing text 'Nascimento' into text field 'xpath=//input[@placeholder='Last Name']'.</msg>
+<status status="PASS" starttime="20230305 14:01:24.454" endtime="20230305 14:01:24.634"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:23.398" endtime="20230305 14:01:24.635"/>
+</kw>
+<kw name="Preenche Text" library="QAresource">
+<arg>${InputEmail}</arg>
+<arg>${email}</arg>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${input}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:01:24.640" endtime="20230305 14:01:24.681"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:24.638" endtime="20230305 14:01:24.681"/>
+</kw>
+<msg timestamp="20230305 14:01:24.682" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:01:24.637" endtime="20230305 14:01:24.682"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:25.692" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:24.683" endtime="20230305 14:01:25.692"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:24.682" endtime="20230305 14:01:25.692"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:01:25.692" endtime="20230305 14:01:25.693"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:24.636" endtime="20230305 14:01:25.693"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230305 14:01:25.695" level="INFO">Typing text 'jessicarochalima21@gmail.com' into text field 'xpath=//input[@id='userEmail']'.</msg>
+<status status="PASS" starttime="20230305 14:01:25.693" endtime="20230305 14:01:25.888"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:24.635" endtime="20230305 14:01:25.888"/>
+</kw>
+<kw name="Click no Item" library="QAresource">
+<arg>${ChkBoxGenero}</arg>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:26.898" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:25.889" endtime="20230305 14:01:26.898"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:25.889" endtime="20230305 14:01:26.898"/>
+</kw>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${item}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:01:26.902" endtime="20230305 14:01:26.945"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:26.901" endtime="20230305 14:01:26.946"/>
+</kw>
+<msg timestamp="20230305 14:01:26.946" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:01:26.901" endtime="20230305 14:01:26.946"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:27.961" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:26.947" endtime="20230305 14:01:27.961"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:26.946" endtime="20230305 14:01:27.961"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:01:27.962" endtime="20230305 14:01:27.962"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:26.899" endtime="20230305 14:01:27.962"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230305 14:01:27.963" level="INFO">Clicking element 'xpath=//label[@for='gender-radio-2']'.</msg>
+<status status="PASS" starttime="20230305 14:01:27.962" endtime="20230305 14:01:28.049"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:25.888" endtime="20230305 14:01:28.050"/>
+</kw>
+<kw name="Preenche Text" library="QAresource">
+<arg>${InputTelefone}</arg>
+<arg>${telefone}</arg>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${input}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:01:28.052" endtime="20230305 14:01:28.089"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:28.052" endtime="20230305 14:01:28.089"/>
+</kw>
+<msg timestamp="20230305 14:01:28.089" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:01:28.051" endtime="20230305 14:01:28.089"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:29.104" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:28.090" endtime="20230305 14:01:29.104"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:28.089" endtime="20230305 14:01:29.104"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:01:29.105" endtime="20230305 14:01:29.105"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:28.051" endtime="20230305 14:01:29.105"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230305 14:01:29.106" level="INFO">Typing text '11987793226"' into text field 'xpath=//input[@placeholder='Mobile Number']'.</msg>
+<status status="PASS" starttime="20230305 14:01:29.106" endtime="20230305 14:01:29.250"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:28.050" endtime="20230305 14:01:29.250"/>
+</kw>
+<kw name="Preenche calender" library="QAresource">
+<arg>${dia}</arg>
+<arg>${mes}</arg>
+<arg>${ano}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${day}</var>
+<arg>//div[@class='react-datepicker__month-container']//div[@class='react-datepicker__month']//div[@aria-disabled='false'][contains(.,'${dia}')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230305 14:01:29.251" level="INFO">${day} = //div[@class='react-datepicker__month-container']//div[@class='react-datepicker__month']//div[@aria-disabled='false'][contains(.,'25')]</msg>
+<status status="PASS" starttime="20230305 14:01:29.251" endtime="20230305 14:01:29.251"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${month}</var>
+<arg>//option[contains(.,'${mes}')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230305 14:01:29.252" level="INFO">${month} = //option[contains(.,'August')]</msg>
+<status status="PASS" starttime="20230305 14:01:29.251" endtime="20230305 14:01:29.252"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${year}</var>
+<arg>//option[contains(.,'${ano}')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230305 14:01:29.252" level="INFO">${year} = //option[contains(.,'1991')]</msg>
+<status status="PASS" starttime="20230305 14:01:29.252" endtime="20230305 14:01:29.252"/>
+</kw>
+<kw name="Click no Item" library="QAresource">
+<arg>${Calendario}</arg>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:30.255" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:29.253" endtime="20230305 14:01:30.255"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:29.253" endtime="20230305 14:01:30.255"/>
+</kw>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${item}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:01:30.258" endtime="20230305 14:01:30.299"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:30.257" endtime="20230305 14:01:30.299"/>
+</kw>
+<msg timestamp="20230305 14:01:30.300" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:01:30.257" endtime="20230305 14:01:30.300"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:31.309" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:30.300" endtime="20230305 14:01:31.309"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:30.300" endtime="20230305 14:01:31.309"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:01:31.309" endtime="20230305 14:01:31.309"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:30.256" endtime="20230305 14:01:31.309"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230305 14:01:31.310" level="INFO">Clicking element 'xpath=//input[@id='dateOfBirthInput']'.</msg>
+<status status="PASS" starttime="20230305 14:01:31.310" endtime="20230305 14:01:31.542"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:29.252" endtime="20230305 14:01:31.542"/>
+</kw>
+<kw name="Click no Item" library="QAresource">
+<arg>${MesNiver}</arg>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:32.558" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:31.544" endtime="20230305 14:01:32.558"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:31.543" endtime="20230305 14:01:32.558"/>
+</kw>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${item}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:01:32.560" endtime="20230305 14:01:32.599"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:32.559" endtime="20230305 14:01:32.599"/>
+</kw>
+<msg timestamp="20230305 14:01:32.600" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:01:32.559" endtime="20230305 14:01:32.600"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:33.617" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:32.600" endtime="20230305 14:01:33.617"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:32.600" endtime="20230305 14:01:33.617"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:01:33.618" endtime="20230305 14:01:33.618"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:32.558" endtime="20230305 14:01:33.619"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230305 14:01:33.620" level="INFO">Clicking element 'xpath=//select[@class='react-datepicker__month-select']'.</msg>
+<status status="PASS" starttime="20230305 14:01:33.619" endtime="20230305 14:01:33.738"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:31.543" endtime="20230305 14:01:33.738"/>
+</kw>
+<kw name="Click no Item" library="QAresource">
+<arg>${month}</arg>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:34.751" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:33.741" endtime="20230305 14:01:34.752"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:33.740" endtime="20230305 14:01:34.752"/>
+</kw>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${item}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:01:34.756" endtime="20230305 14:01:34.811"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:34.755" endtime="20230305 14:01:34.811"/>
+</kw>
+<msg timestamp="20230305 14:01:34.811" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:01:34.754" endtime="20230305 14:01:34.811"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:35.818" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:34.812" endtime="20230305 14:01:35.818"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:34.811" endtime="20230305 14:01:35.819"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:01:35.819" endtime="20230305 14:01:35.820"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:34.752" endtime="20230305 14:01:35.821"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230305 14:01:35.823" level="INFO">Clicking element '//option[contains(.,'August')]'.</msg>
+<status status="PASS" starttime="20230305 14:01:35.821" endtime="20230305 14:01:35.910"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:33.738" endtime="20230305 14:01:35.911"/>
+</kw>
+<kw name="Click no Item" library="QAresource">
+<arg>${MesNiver}</arg>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:36.919" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:35.912" endtime="20230305 14:01:36.919"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:35.912" endtime="20230305 14:01:36.920"/>
+</kw>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${item}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:01:36.923" endtime="20230305 14:01:36.960"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:36.921" endtime="20230305 14:01:36.960"/>
+</kw>
+<msg timestamp="20230305 14:01:36.960" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:01:36.921" endtime="20230305 14:01:36.960"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:37.962" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:36.961" endtime="20230305 14:01:37.962"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:36.961" endtime="20230305 14:01:37.962"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:01:37.963" endtime="20230305 14:01:37.963"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:36.920" endtime="20230305 14:01:37.964"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230305 14:01:37.965" level="INFO">Clicking element 'xpath=//select[@class='react-datepicker__month-select']'.</msg>
+<status status="PASS" starttime="20230305 14:01:37.964" endtime="20230305 14:01:38.065"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:35.911" endtime="20230305 14:01:38.065"/>
+</kw>
+<kw name="Click no Item" library="QAresource">
+<arg>${AnoNiver}</arg>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:39.081" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:38.067" endtime="20230305 14:01:39.081"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:38.066" endtime="20230305 14:01:39.082"/>
+</kw>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${item}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:01:39.085" endtime="20230305 14:01:39.142"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:39.084" endtime="20230305 14:01:39.143"/>
+</kw>
+<msg timestamp="20230305 14:01:39.143" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:01:39.083" endtime="20230305 14:01:39.143"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:40.148" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:39.144" endtime="20230305 14:01:40.148"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:39.143" endtime="20230305 14:01:40.148"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:01:40.149" endtime="20230305 14:01:40.149"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:39.082" endtime="20230305 14:01:40.150"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230305 14:01:40.151" level="INFO">Clicking element 'xpath=//select[@class='react-datepicker__year-select']'.</msg>
+<status status="PASS" starttime="20230305 14:01:40.150" endtime="20230305 14:01:40.290"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:38.065" endtime="20230305 14:01:40.290"/>
+</kw>
+<kw name="Click no Item" library="QAresource">
+<arg>${year}</arg>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:41.306" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:40.292" endtime="20230305 14:01:41.306"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:40.291" endtime="20230305 14:01:41.307"/>
+</kw>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${item}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:01:41.309" endtime="20230305 14:01:41.358"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:41.309" endtime="20230305 14:01:41.359"/>
+</kw>
+<msg timestamp="20230305 14:01:41.359" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:01:41.308" endtime="20230305 14:01:41.359"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:42.372" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:41.361" endtime="20230305 14:01:42.372"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:41.360" endtime="20230305 14:01:42.373"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:01:42.373" endtime="20230305 14:01:42.374"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:41.307" endtime="20230305 14:01:42.375"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230305 14:01:42.378" level="INFO">Clicking element '//option[contains(.,'1991')]'.</msg>
+<status status="PASS" starttime="20230305 14:01:42.375" endtime="20230305 14:01:42.503"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:40.290" endtime="20230305 14:01:42.504"/>
+</kw>
+<kw name="Click no Item" library="QAresource">
+<arg>${AnoNiver}</arg>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:43.521" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:42.506" endtime="20230305 14:01:43.521"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:42.505" endtime="20230305 14:01:43.521"/>
+</kw>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${item}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:01:43.524" endtime="20230305 14:01:43.563"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:43.523" endtime="20230305 14:01:43.564"/>
+</kw>
+<msg timestamp="20230305 14:01:43.564" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:01:43.523" endtime="20230305 14:01:43.564"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:44.581" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:43.565" endtime="20230305 14:01:44.581"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:43.564" endtime="20230305 14:01:44.582"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:01:44.582" endtime="20230305 14:01:44.583"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:43.521" endtime="20230305 14:01:44.583"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230305 14:01:44.585" level="INFO">Clicking element 'xpath=//select[@class='react-datepicker__year-select']'.</msg>
+<status status="PASS" starttime="20230305 14:01:44.584" endtime="20230305 14:01:44.726"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:42.504" endtime="20230305 14:01:44.727"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:45.730" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:44.727" endtime="20230305 14:01:45.730"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:44.727" endtime="20230305 14:01:45.730"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:46.745" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:45.731" endtime="20230305 14:01:46.745"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:45.730" endtime="20230305 14:01:46.745"/>
+</kw>
+<kw name="Click Javascript" library="QAresource">
+<arg>${day}</arg>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${elemento}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:01:46.747" endtime="20230305 14:01:46.781"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:46.747" endtime="20230305 14:01:46.781"/>
+</kw>
+<msg timestamp="20230305 14:01:46.781" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:01:46.747" endtime="20230305 14:01:46.782"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:47.785" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:46.782" endtime="20230305 14:01:47.785"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:46.782" endtime="20230305 14:01:47.785"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:01:47.786" endtime="20230305 14:01:47.786"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:46.746" endtime="20230305 14:01:47.786"/>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${elemento2}</var>
+<arg>${elemento}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20230305 14:01:47.797" level="INFO">${elemento2} = &lt;selenium.webdriver.remote.webelement.WebElement (session="68fe0c7679ba3a9fa5f75b122ddaa4d1", element="45a8798f-910c-42d5-860d-3d1e4284dada")&gt;</msg>
+<status status="PASS" starttime="20230305 14:01:47.786" endtime="20230305 14:01:47.797"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>arguments[0].click();</arg>
+<arg>ARGUMENTS</arg>
+<arg>${elemento2}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230305 14:01:47.799" level="INFO">Executing JavaScript:
+arguments[0].click();
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="68fe0c7679ba3a9fa5f75b122ddaa4d1", element="45a8798f-910c-42d5-860d-3d1e4284dada")&gt;'</msg>
+<status status="PASS" starttime="20230305 14:01:47.798" endtime="20230305 14:01:47.814"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230305 14:01:48.193" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230305 14:01:47.814" endtime="20230305 14:01:48.193"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:46.746" endtime="20230305 14:01:48.193"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:29.250" endtime="20230305 14:01:48.194"/>
+</kw>
+<kw name="Preenche AutoCompletavel" library="QAresource">
+<arg>${InputAssunto}</arg>
+<arg>${assunto}</arg>
+<kw name="Preenche Teclando" library="QAresource">
+<arg>${input}</arg>
+<arg>${texto[:2]}</arg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${input}</arg>
+<arg>${teclas}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230305 14:01:48.197" level="INFO">Sending key(s) ('Co',) to xpath=//div[@id='subjectsContainer'] element.</msg>
+<msg timestamp="20230305 14:01:48.499" level="INFO">Sending keys Co</msg>
+<status status="PASS" starttime="20230305 14:01:48.196" endtime="20230305 14:01:48.553"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:48.195" endtime="20230305 14:01:48.554"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${element}</var>
+<arg>//*[contains(text(),'${texto}')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230305 14:01:48.554" level="INFO">${element} = //*[contains(text(),'Computer Science')]</msg>
+<status status="PASS" starttime="20230305 14:01:48.554" endtime="20230305 14:01:48.554"/>
+</kw>
+<kw name="Click no Item" library="QAresource">
+<arg>${element}</arg>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:49.562" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:48.555" endtime="20230305 14:01:49.562"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:48.555" endtime="20230305 14:01:49.562"/>
+</kw>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${item}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:01:49.565" endtime="20230305 14:01:49.621"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:49.564" endtime="20230305 14:01:49.622"/>
+</kw>
+<msg timestamp="20230305 14:01:49.622" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:01:49.564" endtime="20230305 14:01:49.622"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:50.626" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:49.623" endtime="20230305 14:01:50.626"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:49.622" endtime="20230305 14:01:50.626"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:01:50.627" endtime="20230305 14:01:50.628"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:49.563" endtime="20230305 14:01:50.628"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230305 14:01:50.630" level="INFO">Clicking element '//*[contains(text(),'Computer Science')]'.</msg>
+<status status="PASS" starttime="20230305 14:01:50.629" endtime="20230305 14:01:50.748"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:48.554" endtime="20230305 14:01:50.749"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:48.194" endtime="20230305 14:01:50.749"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:51.752" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:50.750" endtime="20230305 14:01:51.752"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:50.749" endtime="20230305 14:01:51.752"/>
+</kw>
+<kw name="Click no Item" library="QAresource">
+<arg>${Hobbie}</arg>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:52.766" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:51.754" endtime="20230305 14:01:52.766"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:51.753" endtime="20230305 14:01:52.766"/>
+</kw>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${item}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:01:52.768" endtime="20230305 14:01:52.806"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:52.768" endtime="20230305 14:01:52.806"/>
+</kw>
+<msg timestamp="20230305 14:01:52.806" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:01:52.767" endtime="20230305 14:01:52.806"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:53.812" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:52.807" endtime="20230305 14:01:53.812"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:52.806" endtime="20230305 14:01:53.812"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:01:53.812" endtime="20230305 14:01:53.813"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:52.767" endtime="20230305 14:01:53.813"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230305 14:01:53.814" level="INFO">Clicking element 'xpath=//div[@class='custom-control custom-checkbox custom-control-inline']//input[@id='hobbies-checkbox-3']/..'.</msg>
+<status status="PASS" starttime="20230305 14:01:53.814" endtime="20230305 14:01:53.894"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:51.753" endtime="20230305 14:01:53.894"/>
+</kw>
+<kw name="Print Tela" library="QAresource">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230305 14:01:54.285" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230305 14:01:53.895" endtime="20230305 14:01:54.286"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:53.894" endtime="20230305 14:01:54.286"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:21.108" endtime="20230305 14:01:54.286"/>
+</kw>
+<kw name="E seleciono o curriculum preencho endereço, &quot;Rua Valdemir Pereira de Camargo, 186&quot;, State and city &quot;NCR&quot;, &quot;Delhi&quot; e dou click em submit" library="QAsteps" sourcename="E seleciono o curriculum preencho endereço, &quot;${endereco}&quot;, State and city &quot;${state}&quot;, &quot;${city}&quot; e dou click em submit">
+<kw name="Click no Item" library="QAresource">
+<arg>${BtnArquivo}</arg>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:55.305" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:54.289" endtime="20230305 14:01:55.305"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:54.289" endtime="20230305 14:01:55.305"/>
+</kw>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${item}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:01:55.308" endtime="20230305 14:01:55.340"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:55.307" endtime="20230305 14:01:55.340"/>
+</kw>
+<msg timestamp="20230305 14:01:55.340" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:01:55.307" endtime="20230305 14:01:55.340"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:01:56.350" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:01:55.341" endtime="20230305 14:01:56.350"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:55.341" endtime="20230305 14:01:56.350"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:01:56.351" endtime="20230305 14:01:56.351"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:55.306" endtime="20230305 14:01:56.351"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230305 14:01:56.352" level="INFO">Clicking element 'xpath=//label[@class='form-file-label']'.</msg>
+<status status="PASS" starttime="20230305 14:01:56.352" endtime="20230305 14:01:56.411"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:54.288" endtime="20230305 14:01:56.412"/>
+</kw>
+<kw name="Limpa input e preenche Sikuli" library="QAresource">
+<arg>${INPUT}</arg>
+<arg>C:\\Users\\MRN Informatica\\Documents\\TesteEpharma\\QAsteps</arg>
+<kw name="Click" library="SikuliLibrary">
+<arg>${ìnput}</arg>
+<doc>Click</doc>
+<msg timestamp="20230305 14:01:59.952" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1678035718858.png'/&gt;
+[log] CLICK on L[126,49]@S(0) (542 msec)</msg>
+<status status="PASS" starttime="20230305 14:01:56.413" endtime="20230305 14:01:59.953"/>
+</kw>
+<kw name="Press Special Key" library="SikuliLibrary">
+<arg>DELETE</arg>
+<doc>Press special key
+ Presses a special keyboard key.</doc>
+<msg timestamp="20230305 14:02:00.095" level="INFO">[log]  TYPE "#DEL."</msg>
+<status status="PASS" starttime="20230305 14:01:59.953" endtime="20230305 14:02:00.095"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>${ìnput}</arg>
+<arg>${text}</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20230305 14:02:05.729" level="INFO">Input Text:
+C:\Users\MRN Informatica\Documents\TesteEpharma\QAsteps</msg>
+<msg timestamp="20230305 14:02:05.729" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1678035720696.png'/&gt;
+[log] CLICK on L[127,50]@S(0) (546 msec)
+[log]  TYPE "C:\Users\MRN Informatica\Documents\TesteEpharma\QAsteps"</msg>
+<status status="PASS" starttime="20230305 14:02:00.096" endtime="20230305 14:02:05.729"/>
+</kw>
+<kw name="Press Special Key" library="SikuliLibrary">
+<arg>ENTER</arg>
+<doc>Press special key
+ Presses a special keyboard key.</doc>
+<msg timestamp="20230305 14:02:05.811" level="INFO">[log]  TYPE "#ENTER."</msg>
+<status status="PASS" starttime="20230305 14:02:05.729" endtime="20230305 14:02:05.812"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:56.412" endtime="20230305 14:02:05.812"/>
+</kw>
+<kw name="Click Imagem" library="QAresource">
+<arg>${CURRICULUM}</arg>
+<kw name="Exists" library="SikuliLibrary">
+<arg>${imagem}</arg>
+<doc>Exists</doc>
+<status status="PASS" starttime="20230305 14:02:05.813" endtime="20230305 14:02:06.208"/>
+</kw>
+<kw name="Double Click" library="SikuliLibrary">
+<arg>${imagem}</arg>
+<doc>Double click</doc>
+<msg timestamp="20230305 14:02:07.868" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1678035726645.png'/&gt;
+[log] DOUBLE CLICK on L[227,144]@S(0) (605 msec)</msg>
+<status status="PASS" starttime="20230305 14:02:06.208" endtime="20230305 14:02:07.868"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:05.812" endtime="20230305 14:02:07.869"/>
+</kw>
+<kw name="Preenche Text" library="QAresource">
+<arg>${InputEndereco}</arg>
+<arg>${endereco}</arg>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${input}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:02:07.878" endtime="20230305 14:02:07.944"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:07.876" endtime="20230305 14:02:07.945"/>
+</kw>
+<msg timestamp="20230305 14:02:07.945" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:02:07.874" endtime="20230305 14:02:07.945"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:02:08.958" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:02:07.947" endtime="20230305 14:02:08.958"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:07.945" endtime="20230305 14:02:08.958"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:02:08.958" endtime="20230305 14:02:08.959"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:07.873" endtime="20230305 14:02:08.960"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230305 14:02:08.961" level="INFO">Typing text 'Rua Valdemir Pereira de Camargo, 186' into text field 'xpath=//textarea[@id='currentAddress']'.</msg>
+<status status="PASS" starttime="20230305 14:02:08.960" endtime="20230305 14:02:09.176"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:07.871" endtime="20230305 14:02:09.177"/>
+</kw>
+<kw name="Ir Até" library="QAresource">
+<arg>${BtnSubmit}</arg>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${element}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:02:09.179" endtime="20230305 14:02:09.216"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:09.179" endtime="20230305 14:02:09.216"/>
+</kw>
+<msg timestamp="20230305 14:02:09.216" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:02:09.179" endtime="20230305 14:02:09.216"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:02:10.218" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:02:09.217" endtime="20230305 14:02:10.218"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:09.216" endtime="20230305 14:02:10.218"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:02:10.219" endtime="20230305 14:02:10.219"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:09.179" endtime="20230305 14:02:10.219"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230305 14:02:10.220" endtime="20230305 14:02:10.521"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:09.177" endtime="20230305 14:02:10.521"/>
+</kw>
+<kw name="Seleciona Item Combo Box" library="QAresource">
+<arg>${InputState}</arg>
+<arg>${state}</arg>
+<kw name="Click no Item" library="QAresource">
+<arg>${ComboBox}</arg>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:02:11.536" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:02:10.523" endtime="20230305 14:02:11.536"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:10.523" endtime="20230305 14:02:11.536"/>
+</kw>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${item}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:02:11.538" endtime="20230305 14:02:11.566"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:11.537" endtime="20230305 14:02:11.566"/>
+</kw>
+<msg timestamp="20230305 14:02:11.566" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:02:11.537" endtime="20230305 14:02:11.566"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:02:12.578" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:02:11.567" endtime="20230305 14:02:12.578"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:11.567" endtime="20230305 14:02:12.578"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:02:12.579" endtime="20230305 14:02:12.579"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:11.536" endtime="20230305 14:02:12.579"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230305 14:02:12.580" level="INFO">Clicking element 'xpath=//div[@id='state']/..'.</msg>
+<status status="PASS" starttime="20230305 14:02:12.580" endtime="20230305 14:02:12.670"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:10.522" endtime="20230305 14:02:12.671"/>
+</kw>
+<kw name="Preenche AutoCompletavel" library="QAresource">
+<arg>${ComboBox}</arg>
+<arg>${item}</arg>
+<kw name="Preenche Teclando" library="QAresource">
+<arg>${input}</arg>
+<arg>${texto[:2]}</arg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${input}</arg>
+<arg>${teclas}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230305 14:02:12.675" level="INFO">Sending key(s) ('NC',) to xpath=//div[@id='state']/.. element.</msg>
+<msg timestamp="20230305 14:02:12.983" level="INFO">Sending keys NC</msg>
+<status status="PASS" starttime="20230305 14:02:12.673" endtime="20230305 14:02:13.025"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:12.671" endtime="20230305 14:02:13.026"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${element}</var>
+<arg>//*[contains(text(),'${texto}')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230305 14:02:13.026" level="INFO">${element} = //*[contains(text(),'NCR')]</msg>
+<status status="PASS" starttime="20230305 14:02:13.026" endtime="20230305 14:02:13.026"/>
+</kw>
+<kw name="Click no Item" library="QAresource">
+<arg>${element}</arg>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:02:14.030" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:02:13.027" endtime="20230305 14:02:14.030"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:13.027" endtime="20230305 14:02:14.030"/>
+</kw>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${item}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:02:14.032" endtime="20230305 14:02:14.069"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:14.032" endtime="20230305 14:02:14.069"/>
+</kw>
+<msg timestamp="20230305 14:02:14.069" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:02:14.031" endtime="20230305 14:02:14.070"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:02:15.072" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:02:14.070" endtime="20230305 14:02:15.072"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:14.070" endtime="20230305 14:02:15.072"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:02:15.072" endtime="20230305 14:02:15.073"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:14.031" endtime="20230305 14:02:15.073"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230305 14:02:15.074" level="INFO">Clicking element '//*[contains(text(),'NCR')]'.</msg>
+<status status="PASS" starttime="20230305 14:02:15.073" endtime="20230305 14:02:15.137"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:13.026" endtime="20230305 14:02:15.137"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:12.671" endtime="20230305 14:02:15.137"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:10.522" endtime="20230305 14:02:15.137"/>
+</kw>
+<kw name="Seleciona Item Combo Box" library="QAresource">
+<arg>${InputCity}</arg>
+<arg>${city}</arg>
+<kw name="Click no Item" library="QAresource">
+<arg>${ComboBox}</arg>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:02:16.155" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:02:15.139" endtime="20230305 14:02:16.155"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:15.139" endtime="20230305 14:02:16.155"/>
+</kw>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${item}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:02:16.157" endtime="20230305 14:02:16.188"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:16.156" endtime="20230305 14:02:16.188"/>
+</kw>
+<msg timestamp="20230305 14:02:16.188" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:02:16.156" endtime="20230305 14:02:16.188"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:02:17.199" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:02:16.189" endtime="20230305 14:02:17.199"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:16.189" endtime="20230305 14:02:17.199"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:02:17.200" endtime="20230305 14:02:17.200"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:16.155" endtime="20230305 14:02:17.200"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230305 14:02:17.202" level="INFO">Clicking element 'xpath=//div[@id='city']/../div/div/div[2]/div'.</msg>
+<status status="PASS" starttime="20230305 14:02:17.201" endtime="20230305 14:02:17.268"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:15.138" endtime="20230305 14:02:17.268"/>
+</kw>
+<kw name="Preenche AutoCompletavel" library="QAresource">
+<arg>${ComboBox}</arg>
+<arg>${item}</arg>
+<kw name="Preenche Teclando" library="QAresource">
+<arg>${input}</arg>
+<arg>${texto[:2]}</arg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${input}</arg>
+<arg>${teclas}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230305 14:02:17.273" level="INFO">Sending key(s) ('De',) to xpath=//div[@id='city']/../div/div/div[2]/div element.</msg>
+<msg timestamp="20230305 14:02:17.575" level="INFO">Sending keys De</msg>
+<status status="PASS" starttime="20230305 14:02:17.272" endtime="20230305 14:02:17.615"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:17.269" endtime="20230305 14:02:17.616"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${element}</var>
+<arg>//*[contains(text(),'${texto}')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230305 14:02:17.616" level="INFO">${element} = //*[contains(text(),'Delhi')]</msg>
+<status status="PASS" starttime="20230305 14:02:17.616" endtime="20230305 14:02:17.616"/>
+</kw>
+<kw name="Click no Item" library="QAresource">
+<arg>${element}</arg>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:02:18.632" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:02:17.617" endtime="20230305 14:02:18.632"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:17.617" endtime="20230305 14:02:18.632"/>
+</kw>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${item}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:02:18.634" endtime="20230305 14:02:18.667"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:18.633" endtime="20230305 14:02:18.667"/>
+</kw>
+<msg timestamp="20230305 14:02:18.667" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:02:18.633" endtime="20230305 14:02:18.667"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:02:19.679" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:02:18.668" endtime="20230305 14:02:19.679"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:18.667" endtime="20230305 14:02:19.679"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:02:19.680" endtime="20230305 14:02:19.680"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:18.633" endtime="20230305 14:02:19.680"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230305 14:02:19.681" level="INFO">Clicking element '//*[contains(text(),'Delhi')]'.</msg>
+<status status="PASS" starttime="20230305 14:02:19.680" endtime="20230305 14:02:19.754"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:17.616" endtime="20230305 14:02:19.755"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:17.269" endtime="20230305 14:02:19.755"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:15.137" endtime="20230305 14:02:19.755"/>
+</kw>
+<kw name="Print Tela" library="QAresource">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230305 14:02:20.202" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230305 14:02:19.756" endtime="20230305 14:02:20.203"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:19.755" endtime="20230305 14:02:20.203"/>
+</kw>
+<kw name="Click Javascript" library="QAresource">
+<arg>${BtnSubmit}</arg>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${elemento}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:02:20.205" endtime="20230305 14:02:20.235"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:20.205" endtime="20230305 14:02:20.236"/>
+</kw>
+<msg timestamp="20230305 14:02:20.236" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:02:20.204" endtime="20230305 14:02:20.236"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:02:21.253" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:02:20.237" endtime="20230305 14:02:21.253"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:20.236" endtime="20230305 14:02:21.253"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:02:21.254" endtime="20230305 14:02:21.254"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:20.204" endtime="20230305 14:02:21.255"/>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${elemento2}</var>
+<arg>${elemento}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20230305 14:02:21.268" level="INFO">${elemento2} = &lt;selenium.webdriver.remote.webelement.WebElement (session="68fe0c7679ba3a9fa5f75b122ddaa4d1", element="cfe719bc-e4fe-46c7-83f9-7ea632371852")&gt;</msg>
+<status status="PASS" starttime="20230305 14:02:21.255" endtime="20230305 14:02:21.268"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>arguments[0].click();</arg>
+<arg>ARGUMENTS</arg>
+<arg>${elemento2}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230305 14:02:21.270" level="INFO">Executing JavaScript:
+arguments[0].click();
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="68fe0c7679ba3a9fa5f75b122ddaa4d1", element="cfe719bc-e4fe-46c7-83f9-7ea632371852")&gt;'</msg>
+<status status="PASS" starttime="20230305 14:02:21.268" endtime="20230305 14:02:21.308"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230305 14:02:21.680" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230305 14:02:21.309" endtime="20230305 14:02:21.681"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:20.203" endtime="20230305 14:02:21.681"/>
+</kw>
+<status status="PASS" starttime="20230305 14:01:54.287" endtime="20230305 14:02:21.681"/>
+</kw>
+<kw name="Entao valido a mensagem &quot;Thanks for submitting the form&quot; com os itens preenchido &quot;${nomeCompleto}&quot; e &quot;${email}&quot; corretamente e finalizo cadastro" library="QAsteps" sourcename="Entao valido a mensagem &quot;${msg}&quot; com os itens preenchido &quot;${nomeCompleto}&quot; e &quot;${email}&quot; corretamente e finalizo cadastro">
+<kw name="Valida Elemento" library="QAresource">
+<arg>${ModalMsg}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:02:21.686" endtime="20230305 14:02:21.732"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:21.685" endtime="20230305 14:02:21.732"/>
+</kw>
+<msg timestamp="20230305 14:02:21.732" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:02:21.684" endtime="20230305 14:02:21.732"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:02:22.742" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:02:21.734" endtime="20230305 14:02:22.742"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:21.734" endtime="20230305 14:02:22.743"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:02:22.743" endtime="20230305 14:02:22.744"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:21.683" endtime="20230305 14:02:22.744"/>
+</kw>
+<kw name="Verifica Se Contem o Texto" library="QAresource">
+<arg>${ModalMsg}</arg>
+<arg>${msg}</arg>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${element}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:02:22.748" endtime="20230305 14:02:22.781"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:22.746" endtime="20230305 14:02:22.782"/>
+</kw>
+<msg timestamp="20230305 14:02:22.782" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:02:22.746" endtime="20230305 14:02:22.782"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:02:23.793" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:02:22.783" endtime="20230305 14:02:23.793"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:22.782" endtime="20230305 14:02:23.793"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:02:23.793" endtime="20230305 14:02:23.794"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:22.745" endtime="20230305 14:02:23.794"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230305 14:02:23.824" level="INFO">Element 'xpath=//div[@class='modal-title h4']' contains text 'Thanks for submitting the form'.</msg>
+<status status="PASS" starttime="20230305 14:02:23.794" endtime="20230305 14:02:23.824"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:22.744" endtime="20230305 14:02:23.824"/>
+</kw>
+<kw name="Print Tela" library="QAresource">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230305 14:02:24.167" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230305 14:02:23.825" endtime="20230305 14:02:24.167"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:23.825" endtime="20230305 14:02:24.167"/>
+</kw>
+<kw name="Valida Item no Modal" library="QAresource">
+<arg>${nomeCompleto}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${element}</var>
+<arg>//div[@class='modal-body']//tr[contains(.,'${item}')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230305 14:02:24.168" level="INFO">${element} = //div[@class='modal-body']//tr[contains(.,'Jessica Nascimento')]</msg>
+<status status="PASS" starttime="20230305 14:02:24.168" endtime="20230305 14:02:24.169"/>
+</kw>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${element}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:02:24.170" endtime="20230305 14:02:24.212"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:24.170" endtime="20230305 14:02:24.212"/>
+</kw>
+<msg timestamp="20230305 14:02:24.212" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:02:24.170" endtime="20230305 14:02:24.212"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:02:25.224" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:02:24.213" endtime="20230305 14:02:25.224"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:24.212" endtime="20230305 14:02:25.224"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:02:25.224" endtime="20230305 14:02:25.225"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:24.169" endtime="20230305 14:02:25.225"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:24.168" endtime="20230305 14:02:25.225"/>
+</kw>
+<kw name="Valida Item no Modal" library="QAresource">
+<arg>${email}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${element}</var>
+<arg>//div[@class='modal-body']//tr[contains(.,'${item}')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230305 14:02:25.226" level="INFO">${element} = //div[@class='modal-body']//tr[contains(.,'jessicarochalima21@gmail.com')]</msg>
+<status status="PASS" starttime="20230305 14:02:25.226" endtime="20230305 14:02:25.226"/>
+</kw>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${element}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:02:25.228" endtime="20230305 14:02:25.256"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:25.227" endtime="20230305 14:02:25.257"/>
+</kw>
+<msg timestamp="20230305 14:02:25.257" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:02:25.227" endtime="20230305 14:02:25.257"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:02:26.268" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:02:25.257" endtime="20230305 14:02:26.268"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:25.257" endtime="20230305 14:02:26.268"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:02:26.269" endtime="20230305 14:02:26.269"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:25.226" endtime="20230305 14:02:26.269"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:25.225" endtime="20230305 14:02:26.269"/>
+</kw>
+<kw name="Click no Item" library="QAresource">
+<arg>${BtnCloseModal}</arg>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:02:27.285" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:02:26.271" endtime="20230305 14:02:27.285"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:26.270" endtime="20230305 14:02:27.285"/>
+</kw>
+<kw name="Valida Elemento" library="QAresource">
+<arg>${item}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Esta Visivel</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Esta Visivel" library="QAresource">
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230305 14:02:27.288" endtime="20230305 14:02:27.324"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:27.287" endtime="20230305 14:02:27.324"/>
+</kw>
+<msg timestamp="20230305 14:02:27.324" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230305 14:02:27.286" endtime="20230305 14:02:27.324"/>
+</kw>
+<kw name="Aguarda" library="QAresource">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 14:02:28.339" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230305 14:02:27.325" endtime="20230305 14:02:28.339"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:27.325" endtime="20230305 14:02:28.339"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${status}' == 'False'</arg>
+<arg>Fatal Error</arg>
+<arg>msg=O Elemento '${element}' não encontrado na tela</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 14:02:28.340" endtime="20230305 14:02:28.340"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:27.286" endtime="20230305 14:02:28.340"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230305 14:02:28.341" level="INFO">Clicking element 'xpath=//button[@id='closeLargeModal']'.</msg>
+<status status="PASS" starttime="20230305 14:02:28.340" endtime="20230305 14:02:28.403"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:26.269" endtime="20230305 14:02:28.404"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:21.682" endtime="20230305 14:02:28.404"/>
+</kw>
+<kw name="Fechar navegador" library="QAresource" type="TEARDOWN">
+<kw name="Print Tela" library="QAresource">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230305 14:02:28.702" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230305 14:02:28.407" endtime="20230305 14:02:28.703"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:28.406" endtime="20230305 14:02:28.703"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230305 14:02:28.703" endtime="20230305 14:02:32.479"/>
+</kw>
+<status status="PASS" starttime="20230305 14:02:28.405" endtime="20230305 14:02:32.480"/>
+</kw>
+<kw name="Stop Recording Test" library="AutoRecorder">
+<arg>CT01:Cadatro Novo</arg>
+<doc>There is no need to execute this keyword manually.</doc>
+<msg timestamp="20230305 14:02:32.580" level="INFO" html="true">&lt;a href="recording_1.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="recording_1.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230305 14:02:32.481" endtime="20230305 14:02:32.580"/>
+</kw>
+<status status="PASS" starttime="20230305 14:00:58.044" endtime="20230305 14:02:32.480"/>
+</test>
+<status status="PASS" starttime="20230305 14:00:55.353" endtime="20230305 14:02:32.585"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="QAtest">QAtest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
